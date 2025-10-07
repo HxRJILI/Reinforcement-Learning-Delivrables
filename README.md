@@ -1,4 +1,4 @@
-# Grid World Reinforcement Learning
+# Grid World Reinforcement Learning 
 
 A comprehensive implementation of Q-Learning and Deep Q-Network (DQN) agents for configurable grid world environments, featuring training, evaluation, convergence analysis, and hyperparameter sensitivity studies.
 
@@ -521,6 +521,6 @@ MIT License - Open source and free to use.
 - DQN: Mnih et al. (2015)
 
 ---
-
+**BY: RJILI HOUSSAM**
 **Version:** 2.1  
 **Last Updated:** 10/7/2025
