@@ -521,6 +521,6 @@ MIT License - Open source and free to use.
 - DQN: Mnih et al. (2015)
 
 ---
-**BY:** RJILI HOUSSAM 
+**BY:** RJILI HOUSSAM   
 **Version:** 2.1  
 **Last Updated:** 10/7/2025
