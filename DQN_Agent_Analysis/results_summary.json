@@ -1,0 +1,23 @@
+{
+    "Simple_5x5": {
+        "avg_reward": 9.919999999999998,
+        "std_reward": 1.7763568394002505e-15,
+        "avg_length": 8.0,
+        "std_length": 0.0,
+        "success_rate": 1.0
+    },
+    "Obstacles_8x8": {
+        "avg_reward": -4.999999999999989,
+        "std_reward": 8.881784197001252e-16,
+        "avg_length": 100.0,
+        "std_length": 0.0,
+        "success_rate": 0.0
+    },
+    "Multi_Goal_10x10": {
+        "avg_reward": -300.0,
+        "std_reward": 0.0,
+        "avg_length": 200.0,
+        "std_length": 0.0,
+        "success_rate": 0.0
+    }
+}

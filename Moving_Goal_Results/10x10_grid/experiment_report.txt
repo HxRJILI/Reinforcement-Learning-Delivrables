@@ -1,0 +1,82 @@
+
+======================================================================
+        Q-LEARNING WITH MOVING GOALS: EXPERIMENTAL REPORT
+======================================================================
+
+EXPERIMENT SETUP:
+-----------------
+Grid Size:              10x10
+Start Position:         (0, 0)
+Number of Episodes:     800
+Max Steps per Episode:  150
+Number of Obstacles:    7
+Possible Goals:         [(9, 9), (9, 0), (0, 9), (9, 4), (4, 9), (5, 0), (0, 5)]
+
+AGENT CONFIGURATION:
+--------------------
+Learning Rate:          0.1
+Discount Factor:        0.95
+Initial Epsilon:        1.0
+Min Epsilon:            0.01
+Epsilon Decay:          0.995
+
+RESULTS (Last 100 Episodes):
+=============================
+
+FIXED GOAL (Baseline):
+----------------------
+Success Rate:           100.00%
+Average Reward:         8.14
+Average Steps:          18.41
+Q-table Size:           100 states
+Goal Position:          (9, 9)
+
+MOVING GOAL:
+------------
+Success Rate:           35.00%
+Average Reward:         -8.39
+Average Steps:          118.15
+Q-table Size:           100 states
+
+PERFORMANCE DEGRADATION:
+------------------------
+Success Rate Drop:      65.00%
+Reward Drop:            16.53
+Steps Increase:         99.74
+
+CONCLUSIONS:
+============
+
+1. LEARNING FAILURE WITH MOVING GOALS:
+   The agent with moving goals achieved a success rate of 35.0%
+   compared to 100.0% with a fixed goal - a degradation of
+   65.0 percentage points.
+
+2. WHY THIS HAPPENS:
+   - Q-learning assumes a stationary environment (MDP with fixed transitions/rewards)
+   - When the goal changes, the optimal policy changes, making previously learned
+     Q-values obsolete or misleading
+   - The agent wastes time exploring states that lead to goals that are no longer active
+   - Each episode with a different goal essentially "unlearns" progress from previous
+     episodes with different goals
+
+3. STATE SPACE EXPLORATION:
+   The moving goal agent explored 100 states vs 100 for
+   fixed goal, showing less exploration
+   but no benefit in performance.
+
+4. PRACTICAL IMPLICATIONS:
+   This demonstrates that standard Q-learning is NOT suitable for:
+   - Non-stationary environments
+   - Multi-task learning without task identification
+   - Scenarios where goals/objectives change over time
+   
+   Alternative approaches needed:
+   - Goal-conditioned RL (HER, UVFA)
+   - Meta-RL / Learning to learn
+   - Context-aware policies
+   - Hierarchical RL with goal abstraction
+
+======================================================================
+Report generated: 10x10_grid
+======================================================================

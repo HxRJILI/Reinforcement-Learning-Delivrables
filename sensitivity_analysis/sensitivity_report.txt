@@ -1,0 +1,80 @@
+======================================================================
+HYPERPARAMETER SENSITIVITY ANALYSIS REPORT
+======================================================================
+
+Environment Configuration:
+  Grid Size: 15x15
+  Start Position: (0, 0)
+  Goals: [(10, 10)]
+  Obstacles: [(2, 2), (2, 3), (3, 2)]
+
+----------------------------------------------------------------------
+Parameter: learning_rate
+----------------------------------------------------------------------
+
+Best for Convergence Speed:
+  Value: 0.5
+  Episodes: 133.3 ± 23.6
+
+Best for Final Reward:
+  Value: 0.1
+  Reward: 0.800 ± 0.000
+
+Best for Efficiency (fewer steps):
+  Value: 0.1
+  Steps: 20.0 ± 0.0
+
+All tested values:
+  learning_rate=0.01: Conv=500.0, Reward=-1.000, Steps=100.0
+  learning_rate=0.05: Conv=400.0, Reward=-1.000, Steps=100.0
+  learning_rate=0.1: Conv=350.0, Reward=0.800, Steps=20.0
+  learning_rate=0.3: Conv=150.0, Reward=0.800, Steps=20.0
+  learning_rate=0.5: Conv=133.3, Reward=0.800, Steps=20.0
+
+----------------------------------------------------------------------
+Parameter: discount_factor
+----------------------------------------------------------------------
+
+Best for Convergence Speed:
+  Value: 0.999
+  Episodes: 350.0 ± 40.8
+
+Best for Final Reward:
+  Value: 0.9
+  Reward: 0.800 ± 0.000
+
+Best for Efficiency (fewer steps):
+  Value: 0.9
+  Steps: 20.0 ± 0.0
+
+All tested values:
+  discount_factor=0.8: Conv=483.3, Reward=-0.400, Steps=73.3
+  discount_factor=0.9: Conv=433.3, Reward=0.800, Steps=20.0
+  discount_factor=0.95: Conv=400.0, Reward=0.800, Steps=20.0
+  discount_factor=0.99: Conv=366.7, Reward=0.800, Steps=20.0
+  discount_factor=0.999: Conv=350.0, Reward=0.800, Steps=20.0
+
+----------------------------------------------------------------------
+Parameter: epsilon_decay
+----------------------------------------------------------------------
+
+Best for Convergence Speed:
+  Value: 0.999
+  Episodes: 283.3 ± 47.1
+
+Best for Final Reward:
+  Value: 0.95
+  Reward: 0.800 ± 0.000
+
+Best for Efficiency (fewer steps):
+  Value: 0.95
+  Steps: 20.0 ± 0.0
+
+All tested values:
+  epsilon_decay=0.95: Conv=316.7, Reward=0.800, Steps=20.0
+  epsilon_decay=0.97: Conv=400.0, Reward=0.800, Steps=20.0
+  epsilon_decay=0.99: Conv=416.7, Reward=0.800, Steps=20.0
+  epsilon_decay=0.995: Conv=333.3, Reward=0.800, Steps=20.0
+  epsilon_decay=0.999: Conv=283.3, Reward=0.800, Steps=20.0
+
+======================================================================
